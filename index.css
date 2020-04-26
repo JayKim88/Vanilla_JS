@@ -1,0 +1,27 @@
+body {
+  background-color: #34495e;
+  color: white;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+h1 {
+  color: #ecf0f1; /*https://flatuicolors.com/palette/defo*/
+  transition: color 0.5s ease-in-out;
+}
+
+.clicked {
+  /*btn 옆에 clicked가 추가될 경우 (이름에 clicked 가 있으면)*/
+  color: darkgrey;
+}
+
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
