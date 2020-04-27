@@ -2,6 +2,7 @@ const clockContainer = document.querySelector(".js-clock"),
   clockTitle = clockContainer.querySelector("h1");
 
 function getTime() {
+  /* 시간 불러와서 표시하는 방법. */
   const date = new Date();
   const minutes = date.getMinutes();
   const hours = date.getHours();
@@ -15,7 +16,10 @@ function getTime() {
 
 function init() {
   getTime();
-  setInterval(getTime, 1000); /*시간간격설정. getTime f을 1(000)초로 설정.*/
+  setInterval(
+    getTime,
+    1000
+  ); /*시간간격설정. getTime function의 refresh 를 1(000)초로 설정.*/
 }
 
 init();

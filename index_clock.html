@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Something JS</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index_clock.css" />
   </head>
   <body>
     <div class="js-clock">
@@ -10,12 +10,19 @@
     </div>
 
     <form class="js-form form">
+      <!-- 이름 입력 후 이를 알아차리게 하기 위해 form을 이용.. 폼은 입력된 데이터를 한 번에 서버로 전송합니다. 
+        전송한 데이터는 웹 서버가 처리하고, 결과에 따른 또 다른 웹 페이지를 보여줍니다.-->
       <input type="text" placeholder="What is your name?" />
     </form>
 
     <h4 class="js-greetings greetings"></h4>
+    <form class="js-toDoForm">
+      <input type="text" placeholder="Write a to do" />
+    </form>
+    <ul class="js-toDoList"></ul>
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
+    <script src="todo.js"></script>
     <!-- javascript는 body 의 가장 밑에 써야 한다.-->
   </body>
 </html>
