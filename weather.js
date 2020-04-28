@@ -4,7 +4,7 @@ const API_KEY =
   "55637cf41280e51273992a6f25da93ad"; /* https://home.openweathermap.org/api_keys
   API(Application Programming Interface)란 다른 서버로부터 손쉽게 데이터를 가져올 수 있는 수단.*/
 
-const COORDS = "coords";
+const COORDS = "coords"; /*coords= 좌표 */
 
 function getWeather(lat, lng) {
   fetch(
