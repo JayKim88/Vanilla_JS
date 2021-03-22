@@ -1,27 +1,93 @@
+html {
+  height: 100%;
+}
 body {
   background-color: #34495e;
+  background-repeat: no-repeat;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 99%;
+  font-family: monospace;
+  min-width: 400px;
 }
-
-.btn {
-  cursor: pointer;
+body h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0rem;
+  margin-top: 0.5rem;
 }
-
-/* h1 {
-  color: #ecf0f1; /*https://flatuicolors.com/palette/defo*/
-  transition: color 0.5s ease-in-out;
-} */
-
-.clicked {
-  /*btn 옆에 clicked가 추가될 경우 (이름에 clicked 가 있으면)*/
-  color: darkgrey;
+body div {
+  margin-bottom: 1rem;
 }
-
 .form,
 .greetings {
-  display: none;
+  display: none; /*display:none 보이지 않고 공간을 미차지.*/
 }
 
 .showing {
   display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.bgImage {
+  /* bg.js 의 bgImage*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+.js-weather {
+  /* border: 3px solid red; */
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: black;
+  font-size: 2rem;
+}
+.js-clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.js-clock h1 {
+  font-size: 2rem;
+  font-family: monospace;
+}
+.inputBox {
+  height: 1.5rem;
+  width: 18rem;
+  margin-bottom: 0.5rem;
+  outline: none;
+  padding-left: 0.3rem;
+}
+.js-toDoList {
+  /* border: 3px solid red; */
+  width: 17rem;
+  list-style: none;
+  padding-left: 0rem;
+  margin-bottom: 0.3rem;
+}
+.js-toDoList li {
+  margin-bottom: 0.2rem;
+  height: 1.5rem;
+  font-size: 1rem;
+}
+#delBtn {
+  margin-right: 0.5rem;
+  border: 1px solid black;
+  background-color: white;
 }

@@ -46,7 +46,7 @@ function paintGreeting(text) {
   greeting.classList.add(
     SHOWING_CN
   ); /* 저장되어 있는 Value를 greeting에 추가한다. */
-  greeting.innerText = `Hello ${text}`; /*greeting 부분에 글자 넣기. 이 경우, SHOWING_CN에 해당. */
+  greeting.innerText = `오늘 컨디션은 어떠세요, ${text} 님?`; /*greeting 부분에 글자 넣기. 이 경우, SHOWING_CN에 해당. */
 }
 
 function loadName() {
