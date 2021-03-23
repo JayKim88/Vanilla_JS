@@ -76,8 +76,6 @@ body div {
 }
 .js-toDoList {
   /* border: 3px solid red; */
-  width: 31%;
-  position: relative;
   list-style: none;
   padding-left: 0rem;
   margin-bottom: 0.3rem;
