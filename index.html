@@ -11,14 +11,12 @@
     <form class="js-form form">
       <!-- 이름 입력 후 이를 알아차리게 하기 위해 form을 이용.. 폼은 입력된 데이터를 한 번에 서버로 전송합니다. 
         전송한 데이터는 웹 서버가 처리하고, 결과에 따른 또 다른 웹 페이지를 보여줍니다.-->
-      <input class="inputBox" type="text" placeholder="이름을 기입해주세요" />
+      <input class="inputBox" type="text" placeholder="이름을 기입해주세요" maxlength="10"/>
     </form>
     <div>
       <h4 class="js-greetings greetings"></h4>
-      <h4>해야할 일들을 적어주세요 :)</h4>
     </div>
     <form class="js-toDoForm">
-      <input class="inputBox" type="text" placeholder="이곳에 하나씩 적어주세요" />
     </form>
     <ul class="js-toDoList"></ul>
     <span class="js-weather"></span>
@@ -26,7 +24,7 @@
     <script src="greeting.js"></script>
     <script src="todo.js"></script>
     <script src="bg.js"></script>
-    <script src="weather.js"></script>
+    <!-- <script src="weather.js"></script> -->
     <!-- javascript는 body 의 가장 밑에 써야 한다.-->
   </body>
 </html>

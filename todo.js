@@ -1,7 +1,7 @@
 const toDoForm = document.querySelector(
     ".js-toDoForm"
   ) /* document.querySelector:  HTML에서 필요한 것을 얻는것 */,
-  toDoInput = toDoForm.querySelector("input"),
+  // toDoInput = toDoForm.querySelector("input"),
   toDoList = document.querySelector(".js-toDoList"); /* toDoList = ul */
 
 const TODOS_LS = "toDos";
@@ -59,19 +59,28 @@ function paintToDo(text) {
   saveToDos(); /* Local Storage에 저장하기. LS 에는 모든 요소가 String으로 저장된다. */
 }
 function handleSubmit(event) {
+  toDoInput = toDoForm.querySelector("input");
   event.preventDefault();
+  // window.location.reload();
+  const numberOfli = toDoList.childElementCount;
+  if (numberOfli > 9) {
+    alert("Todo 는 10개 미만으로 적어주세요");
+    return;
+  }
   const currentValue = toDoInput.value; /*Input창의 입력된 값이 곧 Value. */
+  if (currentValue.replace(/\s/g, "").length === 0) {
+    alert("내용을 기입해 주세요");
+    return;
+  }
   paintToDo(currentValue);
   toDoInput.value = ""; /* 타입 엔터 치면 화면의 글자는 사라진다. */
 }
 function loadToDos() {
   const loadedToDos = localStorage.getItem(TODOS_LS);
   if (loadedToDos !== null) {
-    // console.log(loadedToDos); string , objective 형태를 비교할 수 있다.
     const parsedToDos = JSON.parse(
       loadedToDos
     ); /* Javascript의 String을 object로 변경시켜준다. */
-    // console.log(parsedToDos); string , objective 형태를 비교할 수 있다.
     parsedToDos.forEach(function (toDo) {
       // toDo: 각 아이템의 value로 명칭은 임의로 정할수 있다.
       paintToDo(toDo.text);

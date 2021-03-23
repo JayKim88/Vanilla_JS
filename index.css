@@ -76,12 +76,14 @@ body div {
 }
 .js-toDoList {
   /* border: 3px solid red; */
-  width: 17rem;
+  width: 31%;
+  position: relative;
   list-style: none;
   padding-left: 0rem;
   margin-bottom: 0.3rem;
 }
 .js-toDoList li {
+  /* border: 3px solid blue; */
   margin-bottom: 0.2rem;
   height: 1.5rem;
   font-size: 1rem;

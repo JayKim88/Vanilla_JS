@@ -1,10 +1,10 @@
 const weather = document.querySelector(".js-weather");
-const API_KEY = "95b8f9cb55fcda61ded7481fda5fad6a"; // https://home.openweathermap.org/api_keys
+const API_KEY = ""; // https://home.openweathermap.org/api_keys
 const COORDS = "coords";
 
 function getWeather(lat, lng) {
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
   )
     .then(function (response) {
       //fetch 완료를 기다려야 하기 때문에 then을 사용함.

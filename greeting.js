@@ -47,6 +47,16 @@ function paintGreeting(text) {
     SHOWING_CN
   ); /* 저장되어 있는 Value를 greeting에 추가한다. */
   greeting.innerText = `오늘 컨디션은 어떠세요, ${text} 님?`; /*greeting 부분에 글자 넣기. 이 경우, SHOWING_CN에 해당. */
+  const mentionDiv = document.createElement("div");
+  const todoInput = document.createElement("input");
+  const todoForm = document.querySelector(".js-toDoForm");
+  mentionDiv.innerText = "해야할 일들을 적어주세요 :)";
+  todoInput.className = "inputBox";
+  todoInput.placeholder = "이곳에 하나씩 적어주세요";
+  todoInput.type = "text";
+  todoInput.maxLength = "20";
+  greeting.appendChild(mentionDiv);
+  todoForm.appendChild(todoInput);
 }
 
 function loadName() {
