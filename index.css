@@ -51,10 +51,10 @@ body div {
 .js-weather {
   /* border: 3px solid red; */
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  color: black;
-  font-size: 2rem;
+  top: 2rem;
+  right: 2rem;
+  color: rgb(249, 255, 166);
+  font-size: 1.8rem;
 }
 .js-clock {
   display: flex;

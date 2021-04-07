@@ -1,5 +1,5 @@
 const weather = document.querySelector(".js-weather");
-const API_KEY = ""; // https://home.openweathermap.org/api_keys
+const API_KEY = "95b8f9cb55fcda61ded7481fda5fad6a"; // https://home.openweathermap.org/api_keys
 const COORDS = "coords";
 
 function getWeather(lat, lng) {
