@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 99%;
+  height: 90%;
   font-family: monospace;
   min-width: 400px;
   margin: 0;
@@ -54,7 +54,7 @@ body div {
   position: absolute;
   top: 2rem;
   right: 2rem;
-  color: rgb(249, 255, 166);
+  color: white;
   font-size: 1.8rem;
 }
 .js-clock {
@@ -70,25 +70,43 @@ body div {
 }
 .inputBox {
   height: 1.5rem;
-  width: 18rem;
+  width: 20rem;
   margin-bottom: 0.5rem;
   outline: none;
   padding-left: 0.3rem;
+  font-size: 1rem;
+}
+.js-listBox {
+  /* border: 3px solid white; */
+  width: 21rem;
+  position: relative;
 }
 .js-toDoList {
   /* border: 3px solid red; */
   list-style: none;
   padding-left: 0rem;
   margin-bottom: 0.3rem;
+  /* width: 30rem; */
+  position: absolute;
 }
 .js-toDoList li {
   /* border: 3px solid blue; */
   margin-bottom: 0.2rem;
   height: 1.5rem;
   font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 #delBtn {
   margin-right: 0.5rem;
   border: 1px solid black;
   background-color: white;
+  cursor: pointer;
+}
+#content {
+  /* border: 3px solid yellow; */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
