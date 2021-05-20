@@ -34,7 +34,7 @@ function paintToDo(text) {
   const delBtn = document.createElement("button"); /* HTML에 필요한 요소를 만들고 메모리 할당. */
   const span = document.createElement("span"); /* HTML에 필요한 요소를 만들고 메모리 할당. */
   const newId = toDos.length + 1; /* 촤초 toDos Array의 갯수는 0개. text를 추가하면 +1 된 값이 id가 된다. */
-
+  
   span.id = "content"
   delBtn.id = "delBtn";
   delBtn.innerText = "❌"; 
