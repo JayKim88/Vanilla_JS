@@ -1,25 +1,21 @@
 const weather = document.querySelector(".js-weather");
-
-const API_KEY =
-  "55637cf41280e51273992a6f25da93ad"; /* https://home.openweathermap.org/api_keys
-  API(Application Programming Interface)란 다른 서버로부터 손쉽게 데이터를 가져올 수 있는 수단.*/
-
-const COORDS = "coords"; /*coords= 좌표 */
+const API_KEY = "95b8f9cb55fcda61ded7481fda5fad6a"; // https://home.openweathermap.org/api_keys
+const COORDS = "coords";
 
 function getWeather(lat, lng) {
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
   )
     .then(function (response) {
       //fetch 완료를 기다려야 하기 때문에 then을 사용함.
       return response.json(); //JSON의 데이터를 가져온다. Javascript Object(Network-headers-General Request URL.)들: 날씨 정보.
     })
     .then(function (json) {
-      //json이 준비되면 나타낸다.
-      //   console.log(json); json 내부 object들의 소속을 알 수 있다.
+      // console.log(json);
       const temperature = json.main.temp;
       const place = json.name;
-      weather.innerText = `${temperature}℃ @ ${place}`;
+      weather.innerText = `${temperature}℃ 
+      ${place}`;
     });
 }
 /* fetch() 안에 가져올 데이터가 들어가면 된다. https:// + 데이터, backtick(`)사용.
@@ -64,5 +60,4 @@ function loadCoords() {
 function init() {
   loadCoords();
 }
-
 init();

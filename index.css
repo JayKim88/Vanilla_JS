@@ -74,6 +74,7 @@ body div {
   margin-bottom: 0.5rem;
   outline: none;
   padding-left: 0.3rem;
+  font-size: 1rem;
 }
 .js-listBox {
   /* border: 3px solid white; */
@@ -89,7 +90,7 @@ body div {
   position: absolute;
 }
 .js-toDoList li {
-  border: 3px solid blue;
+  /* border: 3px solid blue; */
   margin-bottom: 0.2rem;
   height: 1.5rem;
   font-size: 1rem;
@@ -105,7 +106,6 @@ body div {
 }
 #content {
   /* border: 3px solid yellow; */
-  /* width: 100rem; */
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;

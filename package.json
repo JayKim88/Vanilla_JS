@@ -1,0 +1,25 @@
+{
+  "name": "vanilla_js",
+  "version": "1.0.0",
+  "description": "Learn from Nomad Coders.",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "request": "^2.88.2",
+    "requirejs": "^2.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayKim88/Vanilla_JS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JayKim88/Vanilla_JS/issues"
+  },
+  "homepage": "https://github.com/JayKim88/Vanilla_JS#readme"
+}
