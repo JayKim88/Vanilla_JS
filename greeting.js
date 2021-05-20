@@ -38,18 +38,22 @@ function askForName() {
 }
 
 function paintGreeting(text) {
-  form.classList.remove(SHOWING_CN); /* 텍스트(기존 유저 이름)를 색칠할 경우 form(입력창)을 숨겨야 함. */
-  greeting.classList.add(SHOWING_CN); /* 저장되어 있는 Value를 greeting에 추가한다. */
+  /*paintGreeting은 text를 필요로 함. */
+  form.classList.remove(
+    SHOWING_CN
+  ); /* 텍스트(기존 유저 이름)를 색칠할 경우 form(입력창)을 숨겨야 함. */
+  greeting.classList.add(
+    SHOWING_CN
+  ); /* 저장되어 있는 Value를 greeting에 추가한다. */
   greeting.innerText = `오늘 컨디션은 어떠세요, ${text} 님?`; /*greeting 부분에 글자 넣기. 이 경우, SHOWING_CN에 해당. */
-  
   const mentionDiv = document.createElement("div");
   const todoInput = document.createElement("input");
   const todoForm = document.querySelector(".js-toDoForm");
-  
-  mentionDiv.innerText = "해야할 일들을 적어주세요 😊";
+  mentionDiv.innerText = "해야할 일들을 적어주세요 😀";
   todoInput.className = "inputBox";
   todoInput.placeholder = "이곳에 하나씩 적어주세요";
   todoInput.type = "text";
+
   greeting.appendChild(mentionDiv);
   todoForm.appendChild(todoInput);
 }
