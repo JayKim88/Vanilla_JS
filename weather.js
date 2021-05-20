@@ -11,10 +11,12 @@ function getWeather(lat, lng) {
       return response.json(); //JSON의 데이터를 가져온다. Javascript Object(Network-headers-General Request URL.)들: 날씨 정보.
     })
     .then(function (json) {
-      // console.log(json);
+      console.log(json);
+      const description = json.weather[0].description;
       const temperature = json.main.temp;
       const place = json.name;
-      weather.innerText = `${temperature}℃ 
+      weather.innerText = `${description}
+      ${temperature}℃ 
       ${place}`;
     });
 }
