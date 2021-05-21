@@ -43,11 +43,13 @@ body div {
   /* bg.js 의 bgImage*/
   position: fixed;
   background-position: center;
-  animation: fadeIn 0.5s linear;
   background-size: cover;
   z-index: -1;
-  width: 200vh;
-  height: 110vh;
+  min-height: 105%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  animation: fadeIn 0.5s linear;
 }
 .js-weather {
   /* border: 3px solid red; */
